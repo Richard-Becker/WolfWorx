@@ -173,6 +173,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -238,6 +239,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\ProductManager\Index.cshtml" />
+    <Content Include="Views\ProductManager\Create.cshtml" />
+    <Content Include="Views\ProductManager\Edit.cshtml" />
+    <Content Include="Views\ProductManager\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -254,6 +259,24 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.6.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.6.0.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WolfWorx.Core\WolfWorx.Core.csproj">
+      <Project>{c5a4a397-93a6-4812-b599-6a03469b278c}</Project>
+      <Name>WolfWorx.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WolfWorx.DataAccess.InMemory\WolfWorx.DataAccess.InMemory.csproj">
+      <Project>{513a78f3-f94d-44db-b2de-74955da903df}</Project>
+      <Name>WolfWorx.DataAccess.InMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WolfWorx.DataAccess.SQL\WolfWorx.DataAccess.SQL.csproj">
+      <Project>{f26a556f-d211-4d21-be2a-0b1065cbf40d}</Project>
+      <Name>WolfWorx.DataAccess.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WolfWorx.Services\WolfWorx.Services.csproj">
+      <Project>{b629acdb-8ba4-42d6-90e4-9e3fd5a48e58}</Project>
+      <Name>WolfWorx.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
